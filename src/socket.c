@@ -25,7 +25,7 @@ void us_internal_init_socket(struct us_socket *s, bool_t is_adopted) {
 	s->context = 0;
 	s->next = 0;
 	s->prev = 0;
-	is_adopted? (s->timeout = 0) : 0;
+	is_adopted? 0 : (s->timeout = 0);
 	s->p.state.poll_type = POLL_TYPE_POLLING_INIT;
 }
 
